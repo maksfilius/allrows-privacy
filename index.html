@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AllRows — Privacy policy / Datenschutzerklärung</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <meta name="description" content="AllRows privacy policy: tables are processed in your browser; no page content is collected or sent.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <span class="logo"><img src="assets/icon.svg" alt="" width="30" height="30">AllRows</span>
+    <nav><a href="#de">Deutsch</a></nav>
+  </div>
+</header>
+<div class="wrap">
+  <div class="prose">
+    <h1>Privacy policy</h1>
+    <p><em>Effective 2026-10-19</em></p>
+    <p>AllRows is a browser extension that copies a table from the web page you are viewing into your clipboard or a file on your computer.</p>
+    <h2>What we collect</h2>
+    <p>Nothing from the pages you use it on. AllRows has no servers, no accounts and no analytics. It does not collect, transmit, sell or share page content or browsing data. The extension makes no network requests.</p>
+    <h2>How page content is handled</h2>
+    <p>When you click the AllRows icon (or use its keyboard shortcut), the extension reads tables on the current tab to show you a preview. This processing happens entirely inside your browser. The table leaves the page only when you choose to copy it to your clipboard or download it as an .xlsx or CSV file on your own device.</p>
+    <h2>Permissions</h2>
+    <ul>
+      <li><strong>activeTab</strong> — access to the current tab only, only after you click the extension.</li>
+      <li><strong>scripting</strong> — to run the table-reading code in that tab on demand.</li>
+      <li><strong>clipboardWrite</strong> — to put the table on your clipboard.</li>
+      <li><strong>sidePanel</strong> — to show a multi-page collection in Chrome’s side panel while you move between pages.</li>
+      <li><strong>storage</strong> — to keep, on your device only: how many large captures you used this month, and a multi-page collection until you close the browser.</li>
+    </ul>
+    <p>AllRows does not request access to all websites, your browsing history, or any other data.</p>
+    <h2>Changes</h2>
+    <p>If this ever changes, this page will be updated before a new version is published, and the change will be described in the store listing.</p>
+    <h2>Contact</h2>
+    <p><a data-email></a></p>
+
+    <h1 id="de" style="margin-top:60px">Datenschutzerklärung</h1>
+    <p><em>Gültig ab 19.10.2026</em></p>
+    <p>AllRows ist eine Browser-Erweiterung, die eine Tabelle von der gerade angezeigten Webseite in Ihre Zwischenablage oder in eine Datei auf Ihrem Computer kopiert.</p>
+    <h2>Welche Daten wir erheben</h2>
+    <p>Nichts von den Seiten, auf denen Sie es nutzen. AllRows hat keine Server, keine Konten und keine Analyse-Tools. Seiteninhalte und Browserdaten werden nicht erhoben, übertragen, verkauft oder weitergegeben. Die Erweiterung stellt keine Netzwerkanfragen.</p>
+    <h2>Umgang mit Seiteninhalten</h2>
+    <p>Wenn Sie auf das AllRows-Symbol klicken (oder das Tastenkürzel verwenden), liest die Erweiterung Tabellen im aktuellen Tab, um eine Vorschau anzuzeigen. Diese Verarbeitung findet ausschließlich in Ihrem Browser statt. Die Tabelle verlässt die Seite nur, wenn Sie sie in die Zwischenablage kopieren oder als .xlsx- bzw. CSV-Datei auf Ihrem eigenen Gerät speichern.</p>
+    <h2>Berechtigungen</h2>
+    <ul>
+      <li><strong>activeTab</strong> — Zugriff nur auf den aktuellen Tab und nur nach Ihrem Klick.</li>
+      <li><strong>scripting</strong> — um den Code zum Lesen der Tabelle bei Bedarf in diesem Tab auszuführen.</li>
+      <li><strong>clipboardWrite</strong> — um die Tabelle in Ihre Zwischenablage zu legen.</li>
+      <li><strong>sidePanel</strong> — um eine mehrseitige Sammlung in Chromes Seitenleiste anzuzeigen, während Sie zwischen Seiten wechseln.</li>
+      <li><strong>storage</strong> — um nur auf Ihrem Gerät zu speichern: die Zahl der in diesem Monat genutzten großen Erfassungen und eine mehrseitige Sammlung bis zum Schließen des Browsers.</li>
+    </ul>
+    <p>AllRows fordert keinen Zugriff auf alle Websites, Ihren Browserverlauf oder andere Daten an.</p>
+    <h2>Kontakt</h2>
+    <p><a data-email></a></p>
+  </div>
+</div>
+<footer class="site-footer"><div class="wrap"><span>© 2026 AllRows</span><span>AllRows — Table to Excel &amp; Sheets (Chrome extension)</span></div></footer>
+<script>
+  // Support email: put the address between the quotes. Empty = point to the Chrome Web Store listing.
+  const email = ''
+  document.querySelectorAll('[data-email]').forEach((a) => {
+    if (email) { a.href = `mailto:${email}`; a.textContent = email }
+    else {
+      const german = Boolean(document.getElementById('de')?.compareDocumentPosition(a) & Node.DOCUMENT_POSITION_FOLLOWING)
+      a.replaceWith(document.createTextNode(german ? 'Über die Support-Seite von AllRows im Chrome Web Store.' : 'Via the AllRows support page in the Chrome Web Store.'))
+    }
+  })
+</script>
+</body>
+</html>
